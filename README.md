@@ -7,7 +7,7 @@ Coding challenge to dynamically render thumbnails and videos using the youtube a
 
 ## Database initialization: https://www.npmjs.com/package/dotenv
 2: Within Root Directory, create file titled '.env'
-  Copy contents below into file with your user specific information substituted for within brackets. String values do not require quotes.
+  Copy contents below into file with your user specific information substituted within brackets. String values do not require quotes.
 
 
   API=[your API key]
