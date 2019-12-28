@@ -10,6 +10,7 @@ const CContainer = {
   height: '50%',
   width: '100%',
   marginBottom: '20px',
+  minHeight: '280px',
 };
 // card media styling
 const SCardMedia = {
@@ -70,9 +71,16 @@ const SP = {
 const SPS = {
   padding: 0,
   marginTop: '-7px',
-  textAlign: 'right',
-  fontSize: '5vw',
+  textAlign: 'left',
+  fontSize: '.7em',
 };
+//typography style for mobile screens
+const SPMobile = {
+  padding: 0,
+  marginTop: '-7px',
+  textAlign: 'left',
+  fontSize: '5vw',
+}
 // card font style
 const SPT = {
   fontFamily: 'Caslon',
@@ -86,8 +94,9 @@ export {
   SContainer,
   CContainer,
   SP,
-  SPH,
   SPS,
+  SPMobile,
+  SPH,
   SPT,
   SCardContent,
   SCardMedia,
