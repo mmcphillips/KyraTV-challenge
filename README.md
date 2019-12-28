@@ -14,9 +14,9 @@ npm install
 
   API=[your API key]
 
-  PGUSER=[your postgres username]
+  PGUSER=[your postgreSQL username]
 
-  PGHOST=[your postgres host]
+  PGHOST=[your postgreSQL host]
 
   PGPASSWORD=[your postgreSQL password]
 
