@@ -5,7 +5,7 @@ import {
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import {
-  SP, SPS, SPT, SCardM, SCardL, SCardS, SCardMobile, SCardContent, SCardContentS, SCardMedia,
+  SP, SPS, SPMobile, SPT, SCardM, SCardL, SCardS, SCardMobile, SCardContent, SCardContentS, SCardMedia,
 } from '../styles.jsx';
 
 const VideoEntry = ({ video, handleClick }) => {
@@ -102,7 +102,7 @@ const VideoEntry = ({ video, handleClick }) => {
             gutterBottom
             variant="headline"
             component="h4"
-            style={SP}
+            style={SPS}
           >
             {video.snippet.title}
           </Typography>
@@ -136,7 +136,7 @@ const VideoEntry = ({ video, handleClick }) => {
           gutterBottom
           variant="headline"
           component="h4"
-          style={SPS}
+          style={SPMobile}
         >
           {video.snippet.title}
         </Typography>

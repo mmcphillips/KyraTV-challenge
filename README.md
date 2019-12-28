@@ -25,14 +25,14 @@ npm install
   PGPORT=[your postgreSQL port number || 5432]
 
 
-3: Initialize Schema: from root directory, run
+3: Initialize Schema: from root directory, run following. prefix sudo may be necessary for to allow for priveleges.
 ```
   psql -U postgres -f schema.sql
 ```
 
 4: Bundle Assets:
 ```
-  npm run react-dev
+  npm run react-build
 ```
 
 5: Start Server:
