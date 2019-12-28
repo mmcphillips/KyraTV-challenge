@@ -15,6 +15,7 @@ const CContainer = {
 // card media styling
 const SCardMedia = {
   marginBottom: '-10px',
+  cursor:'pointer',
 };
 // For Large screens
 const SCardL = {
