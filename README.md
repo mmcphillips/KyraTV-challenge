@@ -25,7 +25,7 @@ npm install
   PGPORT=[your postgreSQL port number || 5432]
 
 
-3: Initialize Schema: from root directory, run following. prefix sudo may be necessary for to allow for priveleges.
+3: Initialize Schema: from root directory, run following. (command is for psql from cmd in Windows)
 ```
   psql -U postgres -f schema.sql
 ```
