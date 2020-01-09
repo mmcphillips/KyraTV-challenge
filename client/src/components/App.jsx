@@ -66,6 +66,7 @@ class App extends React.Component {
   }
 
   updateVideos() {
+    console.log(this.state.currentVideos);
     if (this.state.currentVideos.length > this.state.videos.length) {
       // send pertinent information to db. ONLY if the information is new.
       const { id } = this.state;
@@ -175,8 +176,9 @@ class App extends React.Component {
 
   saveKyraVideos(videos) {
     const newVideos = this.state.currentVideos.concat(videos);
+    const filteredVideos = newVideos.filter( (item) => item.snippet.thumbnails);
     this.setState({
-      currentVideos: newVideos,
+      currentVideos: filteredVideos,
     });
   }
 
