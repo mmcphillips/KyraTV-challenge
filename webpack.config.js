@@ -1,6 +1,10 @@
 const webpack = require('webpack');
+const path = require('path');
 const dotenv = require('dotenv');
 // webpack configuration object for bundling assets and exposing .env variables to client
+const SRC_DIR = path.join(__dirname, '/client/src');
+const DIST_DIR = path.join(__dirname, '/client/dist');
+
 module.exports = () => {
   const env = dotenv.config().parsed;
   const envKeys = Object.keys(env).reduce((prev, next) => {
@@ -9,7 +13,7 @@ module.exports = () => {
   }, {});
   // webpack configuration object defining entry point, what files to bundle, and which to exclude
   return {
-    entry: `${__dirname}/client/src/index.jsx`,
+    entry: `${SRC_DIR}/index.jsx`,
     module: {
       rules: [
         {
@@ -26,7 +30,7 @@ module.exports = () => {
     },
     output: {
       filename: 'bundle.js',
-      path: `${__dirname}/client/dist`,
+      path: DIST_DIR,
     },
     node: {
       fs: 'empty',
