@@ -13,7 +13,7 @@ module.exports = () => {
   }, {});
   // webpack configuration object defining entry point, what files to bundle, and which to exclude
   return {
-    entry: `${SRC_DIR}/index.jsx`,
+    entry: `${SRC_DIR}/Index.jsx`,
     module: {
       rules: [
         {
