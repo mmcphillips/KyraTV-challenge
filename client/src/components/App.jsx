@@ -66,7 +66,6 @@ class App extends React.Component {
   }
 
   updateVideos() {
-    console.log(this.state.currentVideos);
     if (this.state.currentVideos.length > this.state.videos.length) {
       // send pertinent information to db. ONLY if the information is new.
       const { id } = this.state;
@@ -113,6 +112,10 @@ class App extends React.Component {
     const cutOffDate = get18MonthsAgo();
     // filter dates
     const filteredResults = videos.filter((item) => checkValidDate(item, cutOffDate));
+    // sort dates to account for
+    const sortedDates = filteredResults.sort((a,b) => {
+      return new Date(b.snippet.publishedAt) - new Date(a.snippet.publishedAt);
+    })
     // generate historical data for chart
     const hist = {};
     const chartData = [];
@@ -191,7 +194,6 @@ class App extends React.Component {
     // initial call
     axios.get(baseURL)
       .then((response) => {
-        console.log(response);
         that.saveKyraVideos(response.data.items);
         if (response.data.nextPageToken) {
           const { nextPageToken } = response.data;
